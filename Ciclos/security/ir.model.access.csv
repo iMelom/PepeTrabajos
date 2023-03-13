@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_formatiu,cicle.formatiu,model_cicle_formatiu,,1,1,1,0
+acl_modulo,cicle.modulo,model_cicle_modulo,,1,1,1,0
+acl_alumno,cicle.alumno,model_cicle_alumno,,1,1,1,0
+acl_profesor,cicle.profesor,model_cicle_profesor,,1,1,1,0

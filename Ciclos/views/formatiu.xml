@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Definición de la vista Tree -->
+    <record id="cicle_formatiu_view_tree" model="ir.ui.view">
+        <field name="name">Lista de formatius</field>
+        <field name="model">cicle.formatiu</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+				<field name="modulo"/>
+                     
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definimos como mostramos la vista en el modelo -->
+    <record id='cicle_formatiu_action' model='ir.actions.act_window'>
+        <field name="name">formatiu</field>
+        <field name="res_model">cicle.formatiu</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="cicle_formatiu_view_tree" />
+    </record>
+
+    <record id="cicle_formatiu_view_form" model="ir.ui.view">
+        <field name="name">Formulario de formatiu</field>
+		<field name="model">cicle.formatiu</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                <field name="nombre"/>
+				<field name="modulo"/>
+
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <menuitem name="formatius" id="cicle_formatiu_menu" parent="cicle_base_menu" action="cicle_formatiu_action"/>
+
+
+</odoo>
